@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Estos son mis botones
         val buttonSumar = findViewById<Button>(R.id.buttonSumar)
         val buttonRestar = findViewById<Button>(R.id.buttonRestar)
         val buttonReset = findViewById<Button>(R.id.buttonReset)
