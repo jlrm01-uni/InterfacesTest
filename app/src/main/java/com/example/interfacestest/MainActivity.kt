@@ -5,41 +5,47 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.view.isVisible
+import com.example.interfacestest.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private var value = 0
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val textView = findViewById<TextView>(R.id.textView)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        val view = binding.root
+        setContentView(view)
+
+        val textView = binding.textView
 
         // Estos son mis botones
-        findViewById<Button>(R.id.buttonSumar).setOnClickListener {
+        binding.buttonSumar.setOnClickListener {
             value+=1
             textView.text = value.toString()
         }
 
-        findViewById<Button>(R.id.buttonRestar).setOnClickListener {
+        binding.buttonRestar.setOnClickListener {
             value-=1
             textView.text = value.toString()
         }
 
-        findViewById<Button>(R.id.buttonReset).setOnClickListener {
+        binding.buttonReset.setOnClickListener {
             value=0
             textView.text = value.toString()
         }
 
-        findViewById<Button>(R.id.buttonSmallerFont).setOnClickListener {
+        binding.buttonSmallerFont.setOnClickListener {
             textView.textSize = 20f
         }
 
-        findViewById<Button>(R.id.buttonBiggerFont).setOnClickListener {
+        binding.buttonBiggerFont.setOnClickListener {
             textView.textSize = 250f
         }
 
-        findViewById<Button>(R.id.buttonHideShow).setOnClickListener {
+        binding.buttonHideShow.setOnClickListener {
             textView.isVisible = !textView.isVisible
         }
     }
