@@ -16,20 +16,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         // Estos son mis botones
-        val buttonSumar = findViewById<Button>(R.id.buttonSumar)
-        val buttonRestar = findViewById<Button>(R.id.buttonRestar)
-        val buttonReset = findViewById<Button>(R.id.buttonReset)
-        val buttonSmallerFont = findViewById<Button>(R.id.buttonSmallerFont)
-        val buttonBiggerFont = findViewById<Button>(R.id.buttonBiggerFont)
-        val buttonHideShow = findViewById<Button>(R.id.buttonHideShow)
+        findViewById<Button>(R.id.buttonSumar).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonRestar).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonReset).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonSmallerFont).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonBiggerFont).setOnClickListener(this)
+        findViewById<Button>(R.id.buttonHideShow).setOnClickListener(this)
 
-        // Estos son los listeners
-        buttonSumar.setOnClickListener(this)
-        buttonRestar.setOnClickListener(this)
-        buttonReset.setOnClickListener(this)
-        buttonSmallerFont.setOnClickListener(this)
-        buttonBiggerFont.setOnClickListener(this)
-        buttonHideShow.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
