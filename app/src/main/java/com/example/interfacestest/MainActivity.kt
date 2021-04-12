@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val buttonBiggerFont = findViewById<Button>(R.id.buttonBiggerFont)
         val buttonHideShow = findViewById<Button>(R.id.buttonHideShow)
 
+        // Estos son los listeners
         buttonSumar.setOnClickListener(this)
         buttonRestar.setOnClickListener(this)
         buttonReset.setOnClickListener(this)
