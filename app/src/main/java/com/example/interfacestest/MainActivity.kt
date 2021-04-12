@@ -22,23 +22,27 @@ class MainActivity : AppCompatActivity() {
             value+=1
             text_view.text = value.toString()
         }
+
         findViewById<Button>(R.id.buttonRestar).setOnClickListener {
             value-=1
             text_view.text = value.toString()
         }
+
         findViewById<Button>(R.id.buttonReset).setOnClickListener {
             value=0
             text_view.text = value.toString()
         }
+
         findViewById<Button>(R.id.buttonSmallerFont).setOnClickListener {
             text_view.textSize = 20f
         }
+
         findViewById<Button>(R.id.buttonBiggerFont).setOnClickListener {
             text_view.textSize = 250f
         }
+
         findViewById<Button>(R.id.buttonHideShow).setOnClickListener {
             text_view.isVisible = !text_view.isVisible
         }
-
     }
 }
